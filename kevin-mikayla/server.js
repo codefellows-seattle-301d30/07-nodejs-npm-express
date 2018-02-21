@@ -22,9 +22,9 @@ app.post('/articles', bodyParser, (request, response) => {
   response.send('Record posted to server!!');
 });
 
-app.use(function(err, req, res){
-  console.error(err.stack);
-  res. status(404).send('Try again! Not found. You knew this would break, why do this?');
+app.use(function(req, res){
+  console.error(req);
+  res.status(404).send('<h1>Try again! Not found. <br />You knew this would break, why do this?</h1>');
 });
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));

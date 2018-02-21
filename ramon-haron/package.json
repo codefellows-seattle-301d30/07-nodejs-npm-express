@@ -1,0 +1,15 @@
+{
+  "name": "ramon-haron",
+  "version": "1.0.0",
+  "description": "Lab-07 Node NPM Express Practice",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Ramon Mendoza and Haron Yunis",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

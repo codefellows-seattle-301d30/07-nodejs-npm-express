@@ -23,9 +23,13 @@ app.get('/new-articles', (request, response) => {
 });
 
 //404 request code
-app.get('*', (request, response) => {
-  console.error(err.stack);
-  response.status(404).send('Error 404!!!!');
+//below being kept on purpose, for further study and playing around with the code
+// app.get('*', (request, response) => {
+//   console.error(err.stack);
+//   response.status(404).send('Error 404!!!!');
+// });
+app.use((request, response) => {
+  response.status(404).send('404 Error!!!!!!!');
 });
 
 

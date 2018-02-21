@@ -18,8 +18,13 @@ const PORT = process.env.PORT || 3000;
 // Set up a route to send new.html
 app.get('/new', (request,response) => {
   console.log('New html working');
-  response.sendFile('/public/new.html',{root: '.'});
+  response.sendFile('new.html',{root: './public'});
 });
+
+app.use(function(req, res) {
+  res.send('404: Page does not exist', 404);
+});
+
 app.post('/articles', bodyParser, function(request, response) {
   // REVIEW: This route will receive a new article from the form page, new.html, and log that form data to the console. We will wire this up soon to actually write a record to our persistence layer!
   console.log(request.body);

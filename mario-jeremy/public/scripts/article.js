@@ -50,7 +50,7 @@ Article.prototype.insertRecord = function(callback) {
       console.log(data);
 
       // COMMENT: What is the purpose of this line? Is the callback invoked when this method is called? Why or why not?
-      // PUT YOUR RESPONSE HERE
+      // If the parmeter 'callback' is referenced, then the function 'callback' should run, but only if there are any changes. The callback should be invoked when this method is called.
       if (callback) callback();
     })
 };

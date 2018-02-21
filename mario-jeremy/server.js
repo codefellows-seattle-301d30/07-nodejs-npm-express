@@ -18,20 +18,23 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static('./public'));
 
 //setup a route to post articles
-app.post('/articles', bodyParser, function(request, response) {
+app.post('/articles', bodyParser, (request, response) => {
   // REVIEW: This route will receive a new article from the form page, new.html, and log that form data to the console. We will wire this up soon to actually write a record to our persistence layer!
   //
   console.log(request.body);
   response.send('Record posted to server!!');
 });
 
+//setup a route to create new article page
+app.get('/new-article', bodyParser, (request, response) => {
+  console.log('New Article Requested');
+  response.sendFile('/public/new.html', {root: '.'});
+});
 
-//setup a route to post articles
-app.post('/articles', bodyParser, function(request, response) {
-  // REVIEW: This route will receive a new article from the form page, new.html, and log that form data to the console. We will wire this up soon to actually write a record to our persistence layer!
-  //
-  console.log(request.body);
-  response.send('Record posted to server!!');
+//set up a route to 404 page
+app.get('*', bodyParser, (request, response) => {
+  console.log('Page not found');
+  response.sendFile('/public/404.html', {root: '.'});
 });
 
 //start the app so it listens for changes

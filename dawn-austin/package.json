@@ -1,0 +1,22 @@
+{
+  "name": "07-nodejs-npm-express",
+  "version": "1.0.0",
+  "description": "lab 07 NodeJS and NPM",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dawnaldrich/07-nodejs-npm-express.git"
+  },
+  "author": "austin dawn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dawnaldrich/07-nodejs-npm-express/issues"
+  },
+  "homepage": "https://github.com/dawnaldrich/07-nodejs-npm-express#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

@@ -50,7 +50,7 @@ Article.prototype.insertRecord = function(callback) {
       console.log(data);
 
       // COMMENT: What is the purpose of this line? Is the callback invoked when this method is called? Why or why not?
-      // PUT YOUR RESPONSE HERE
+      // To check if when .insertRecord is called, if it has a method being passed as this parameter, this line will run the method.  Right now there nothing being passed, so callback is falsey, so nothing will happen.
       if (callback) callback();
     })
 };

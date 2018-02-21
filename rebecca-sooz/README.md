@@ -3,10 +3,10 @@
 # Kilovolt Blog Lab 7
 
 **Author**: Rebecca and Suzanne
-**Version**: 1.0.2 (increment the patch/fix version number up if you make more commits past your first submission)
+**Version**: 1.0.3 
 
 ## Overview
-This product is designed to give users a consistent reading and navigation experience across mobile and desktop devices, with content ordered by most recent first and sortable by both author or category. Additionally, users who want to add articles to the blog may now do so and either publish immediately or review a draft. If they want they can use the JSON link at the bottom to add their new content to the blogArticles.js to be displayed on the main blog, as well. We wanted the user to load articles from an external source.
+This product is designed to give users a consistent reading and navigation experience across mobile and desktop devices, with content ordered by most recent first and sortable by both author or category. Additionally, users who want to add articles to the blog and will soon be able to with the submit button. The articles are now available via a external resource instead of just from local storage.
 
 ## Getting Started
 
@@ -30,24 +30,30 @@ The user would need to
 * Connect the new HTML page to the exisiting blog page and update articleView.js, as well as articles.js to render content correctly across both pages.
 * Be sure to write DRY code and leverage the libraries, as well as arrow functions to make code work as optimially as possible.
 * Regularly use console logs, Chrome developer console tools and the help of others to identify and correct all coding and rendering erros. 
-* Convert the blogArticle.js to JSON file.
-* Then we used the AJAX methodology to access the article data in the JSON and store in Local Storage. 
+* Convert the blogArticle.js to JSON file, hackerIpsum.json
+* Next the user will need to install two npm packages including Express and nodemon
+* The user needs to be sure to create a proper .gitignore file
+* Change all functions to arrow functions where possible and contextual this is not used. 
 
 ## Architecture
 
-I used IcoMoon icon font for navigation icons. I included the jQuery, Handlebars, Hightlight JS, and Railcasts libraies, with related CSS as needed. Applied AJAX function RESTful website application. I used Chrome to analyze and inspect. Project is built used HTML, CSS and JavaScript.
+We used IcoMoon icon font for navigation icons. We included the jQuery, Handlebars, Hightlight JS, and Railcasts libraies, with related CSS as needed. We installed and used Express and nodemon npm JS packages. We worked to create a RESTful website application. We used Chrome, and nodemon to analyze and inspect both the view and the controller. Project is built used HTML, CSS and JavaScript.
 
 ## Change Log
 2-21-2018
 10:15am-Completed comments in articleView.js
 10:48am-Installed express package completed comments in article.js. Updated README
+12:22pm-Completed working server.js controller with new 404 error message and endpoints for both index and new set up. Also all functions refactored to arrow function where possible. Update README.md.
+
+
 ## Credits and Collaborations
 * Thanks to my instructors and TAs and our classmates 
 * The following libraries were used: jQuery,Highlight JS, Handlebars and Railcast.
 * We referenced the jQuery cheat sheet: https://oscarotero.com/jquery/
 * We used HandleBars library.
 * We referenced our text book: Jon Duckett - JavaScript and JQuery.
-* Reference for ternary from MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+* We used Node documentation: https://nodejs.org/en/
+* We used npm documentation: https://docs.npmjs.com/
+* We also used Express documentation: http://expressjs.com/en/4x/api.html 
 
-* Reference for local storage -https://stackoverflow.com/questions/2010892/storing-objects-in-html5-localstorage
-* Reference for arrow functions MDN- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+

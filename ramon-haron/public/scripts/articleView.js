@@ -73,7 +73,7 @@ articleView.setTeasers = () => {
   });
 };
 
-// COMMENT: When/where is this function invoked? What event ultimately triggers its execution? Explain the sequence of code execution when this function is invoked.
+// DONE COMMENT: When/where is this function invoked? What event ultimately triggers its execution? Explain the sequence of code execution when this function is invoked.
 // This function is invoked in the new.html is loaded. It shows the contents of the tab-content class. It hides the contents of export-field id. Then it focuses on anything you've selected in the article-json id. And when you change anything in the new-form id it updates the preview with the content you entered.
 articleView.initNewArticlePage = () => {
   $('.tab-content').show();
@@ -86,8 +86,8 @@ articleView.initNewArticlePage = () => {
   $('#new-form').on('submit', articleView.submit);
 };
 
-// COMMENT: When is this function called? What event ultimately triggers its execution?
-// PUT YOUR RESPONSE HERE
+// DONE COMMENT: When is this function called? What event ultimately triggers its execution?
+// It's being called in the eventListner on event change held above.
 articleView.create = () => {
   let article;
   $('#articles').empty();
@@ -111,8 +111,11 @@ articleView.create = () => {
   $('#article-json').val(`${JSON.stringify(article)},`);
 };
 
-// COMMENT: When is this function called? What event ultimately triggers its execution?
+// DONE-COMMENT: When is this function called? What event ultimately triggers its execution?
 // PUT YOUR RESPONSE HERE
+
+// It's being used in the init newArticle functin as a callback to an eventListener
+
 articleView.submit = event => {
   event.preventDefault();
   let article = new Article({
@@ -124,8 +127,8 @@ articleView.submit = event => {
     publishedOn: $('#article-published:checked').length ? new Date() : null
   });
 
-  // COMMENT: Where is this function defined? When is this function called? What event ultimately triggers its execution?
-  // PUT YOUR RESPONSE HERE
+  // DONE COMMENT: Where is this function defined? When is this function called? What event ultimately triggers its execution?
+  // It's defined in the article.js as a prototype method to Article. Also it is being called when the submit event happens. 
   article.insertRecord();
 }
 

@@ -74,7 +74,7 @@ articleView.setTeasers = () => {
 };
 
 // COMMENT: When/where is this function invoked? What event ultimately triggers its execution? Explain the sequence of code execution when this function is invoked.
-// PUT YOUR RESPONSE HERE
+// This function is invoked in the new.html is loaded. It shows the contents of the tab-content class. It hides the contents of export-field id. Then it focuses on anything you've selected in the article-json id. And when you change anything in the new-form id it updates the preview with the content you entered.
 articleView.initNewArticlePage = () => {
   $('.tab-content').show();
   $('#export-field').hide();

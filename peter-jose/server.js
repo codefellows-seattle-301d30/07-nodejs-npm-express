@@ -2,6 +2,12 @@
 
 // REVIEW: There is a package here called body-parser, which is used by the provided POST route. Be sure to install that and save it as a dependency after you create your package.json.
 
+// load the express library from node_modules
+const express = require('express');
+
+//instantiate express
+const app = express();
+
 const bodyParser = require('body-parser').urlencoded({extended: true});
 const PORT = process.env.PORT || 3000;
 

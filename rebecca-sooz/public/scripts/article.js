@@ -32,7 +32,7 @@ Article.fetchAll = () => {
     Article.loadAll(JSON.parse(localStorage.rawData));
     articleView.initIndexPage();
   } else {
-    $.getJSON('/data/hackerIpsum.json')
+    $.getJSON('./data/hackerIpsum.json')
       .then(data => {
         Article.loadAll(data);
         localStorage.rawData = JSON.stringify(data);

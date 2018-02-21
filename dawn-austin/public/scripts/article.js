@@ -50,7 +50,7 @@ Article.prototype.insertRecord = function(callback) {
       console.log(data);
 
       // COMMENT: What is the purpose of this line? Is the callback invoked when this method is called? Why or why not?
-      // PUT YOUR RESPONSE HERE
+      // This line is executed if the function is passed in a callback. That way, if we reach the end of the code block and there is a callback to run, run the callback. This is not run until everything else in the method completes as it is passed in as a parameter inside an asychronous jQuery method.
       if (callback) callback();
     })
 };

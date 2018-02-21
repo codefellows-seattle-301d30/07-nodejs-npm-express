@@ -1,0 +1,23 @@
+{
+  "name": "mario-jeremy",
+  "version": "1.0.0",
+  "description": "lab-7",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mario4821/07-nodejs-npm-express.git"
+  },
+  "author": "Mario Flores Jeremy Crawford",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mario4821/07-nodejs-npm-express/issues"
+  },
+  "homepage": "https://github.com/mario4821/07-nodejs-npm-express#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

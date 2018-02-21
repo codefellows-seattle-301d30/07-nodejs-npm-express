@@ -74,7 +74,7 @@ articleView.setTeasers = () => {
 };
 
 // COMMENT: When/where is this function invoked? What event ultimately triggers its execution? Explain the sequence of code execution when this function is invoked.
-// PUT YOUR RESPONSE HERE
+// This method is invoked on load of the new.html page as the last script. When it is invoked, the tab-content class is shown, the export-field id is hidden, an event listener is created to highlight the article-json id if focused, and two event listeners are made for the new-form id, one to invoke the acticleView.create method on change of input or textarea fields, the other to invoke the articleView.subit method when submitted.
 articleView.initNewArticlePage = () => {
   $('.tab-content').show();
   $('#export-field').hide();
@@ -87,7 +87,7 @@ articleView.initNewArticlePage = () => {
 };
 
 // COMMENT: When is this function called? What event ultimately triggers its execution?
-// PUT YOUR RESPONSE HERE
+// This is called in the initNewArticlePage method of articleView. It is invoked on the event listener for new-form on change of input or textarea.
 articleView.create = () => {
   let article;
   $('#articles').empty();
@@ -112,7 +112,7 @@ articleView.create = () => {
 };
 
 // COMMENT: When is this function called? What event ultimately triggers its execution?
-// PUT YOUR RESPONSE HERE
+// This is called in the initNewArticlePage method of articleView. It is invoked on the event listener for new-form on submit button.
 articleView.submit = event => {
   event.preventDefault();
   let article = new Article({
@@ -125,7 +125,7 @@ articleView.submit = event => {
   });
 
   // COMMENT: Where is this function defined? When is this function called? What event ultimately triggers its execution?
-  // PUT YOUR RESPONSE HERE
+  // The insertRecord method is defined in the article.js file. It is called as the last callback of submit method. It triggers after the sumbit button event listener is activated.
   article.insertRecord();
 }
 

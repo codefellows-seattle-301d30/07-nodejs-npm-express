@@ -9,12 +9,17 @@ const express = require('express');
 const app = express();
 
 //setting up directory for express
-//it tells the server which directory to serve files from
+//it tells the server which directory to serve files from and will be what the Public will see.
 app.use(express.static('./public'));
 
 const bodyParser = require('body-parser').urlencoded({extended: true});
 const PORT = process.env.PORT || 3000;
 
+// Set up a route to send new.html
+app.get('/new', (request,response) => {
+  console.log('New html working');
+  response.sendFile('/public/new.html',{root: '.'});
+});
 app.post('/articles', bodyParser, function(request, response) {
   // REVIEW: This route will receive a new article from the form page, new.html, and log that form data to the console. We will wire this up soon to actually write a record to our persistence layer!
   console.log(request.body);

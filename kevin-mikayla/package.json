@@ -1,0 +1,21 @@
+{
+  "name": "kevin-mikayla",
+  "version": "1.0.0",
+  "description": "lab-07",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/knyghtLyght/07-nodejs-npm-express/blob/master/LAB.md"
+  },
+  "author": "Kevin-mikayla",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "nodemon": "^1.15.1"
+  }
+}
